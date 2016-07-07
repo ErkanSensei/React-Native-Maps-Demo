@@ -1,0 +1,49 @@
+{
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "env": {
+        "browser": true,
+        "node": true,
+        "mocha": true
+    },
+    "ecmaFeatures": {
+        "forOf": true,
+        "jsx": true,
+        "es6": true,
+        "experimentalObjectRestSpread": true
+    },
+    ecmaVersion: 6,
+    "rules": {
+        "complexity": [2, 12],
+        "comma-dangle": 0,
+        "indent": [2, 2, {"SwitchCase": 1}],
+        "arrow-body-style": [2, "as-needed"],
+        "semi": [2, "never"],
+        "quotes": [2, "single", "avoid-escape"],
+        "strict": 0,
+        "eol-last": 1,
+        "camelcase": 0,
+        "no-use-before-define": [2, "nofunc"],
+        "no-underscore-dangle": 0,
+        "no-trailing-spaces": 0,
+        "new-cap": [2, {"capIsNew": false}],
+        "no-unused-vars": [2, {"var": "all", "args": "none"}],
+        "no-undef": 2,
+        "jsx-quotes": 2,
+        "react/display-name": 0,
+        "react/jsx-no-undef": 2,
+        "react/jsx-uses-react": 2,
+        "react/jsx-uses-vars": 2,
+        "react/no-did-mount-set-state": 2,
+        "react/no-did-update-set-state": 2,
+        "react/no-multi-comp": 2,
+        "react/prop-types": 1,
+        "react/react-in-jsx-scope": 2,
+        "react/self-closing-comp": 2,
+        "react/wrap-multilines": 2
+    },
+    "globals": {
+      "__DEVSERVER__": true,
+      "__DEVCLIENT__": true
+    }
+}
