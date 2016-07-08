@@ -4,10 +4,10 @@ import {
   StyleSheet,
 } from 'react-native'
 
-import Google from './Google.js'
+import MapBox from 'react-native-mapbox-gl'
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#c12626',
+    flex: 1,
   },
   welcome: {
     fontSize: 20,
@@ -32,20 +32,14 @@ class Home extends Component { //eslint-disable-line
     return (
       <Container>
         <Header style = {styles.container}>
-          <Title>Maps Demo</Title>
+          <Title>MapBox Demo</Title>
         </Header>
         <Content>
-          <Button block success
-            style = {styles.button}
-            onPress = {() => {
-              this.props.navigator.push({ //eslint-disable-line
-                navigator: this.props.navigator, //eslint-disable-line
-                component: Google
-              })
-            }}
-          >
-            <Icon name = "logo-google" />
-          </Button>
+          <MapBox
+            style = {styles.container}
+            accessToken =
+            "pk.eyJ1IjoiZXJrYW50ZXN0IiwiYSI6ImNpcWQ5bGJiajAyZWxmbG0xNmJrdTMxaWIifQ.GHe3OIDoev9fVbHsREiwkA" //eslint-disable-line
+          />
         </Content>
       </Container>
     )
